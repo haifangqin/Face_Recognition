@@ -14,11 +14,11 @@ pip install numpy==1.17 loguru==0.6.0 tqdm==4.61.2
 
 
 if ! ls|grep weights; then
-    aws s3 cp s3://hotstar-ads-ml-us-east-1-prod/content-intelligence/face_recognition/weights.zip .
-    unzip weights.zip
+    aws s3 cp s3://hotstar-ads-ml-us-east-1-prod/content-intelligence/face_recognition/weights.tar.gz .
+    tar xvf weights.tar.gz
 fi
 
 if ! ls|grep test_set; then
-    aws s3 cp s3://hotstar-ads-ml-us-east-1-prod/content-intelligence/face_recognition/test_set.zip .
-    unzip test_set.zip
+    aws s3 cp s3://hotstar-ads-ml-us-east-1-prod/content-intelligence/face_recognition/test_set.tar.gz .
+    tar xvf test_set.tar.gz
 fi
