@@ -39,3 +39,10 @@ Inside results directory, there could be three types of output associated with e
 5. ```<SAVE_DIR>/test.json``` - The detection results.
 6. ```<SAVE_DIR>/feat.list``` - All the output from face quality inference, used for calculating face quality score.
 7. ```<SAVE_DIR>/output.json``` - Extrated embeddings, size is 512, can be used for clustering and recognition.
+
+
+## Artwork Clustering
+This will cluster the faces according to the embeddings
+```bash
+python faceClustering.py --filtered_csv $FILTERED_CSV --ouput_csv $OUTPUT_CSV --output_cluster_imgs $OUTPUT_CLUSTER_IMGS
+```
