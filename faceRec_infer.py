@@ -52,17 +52,17 @@ def main(arg):
     # for saving the results images with bbox and identity
     if not os.path.isdir(os.path.join(arg.save_root_path, 'detect_imgs')):
         os.mkdir(os.path.join(arg.save_root_path, 'detect_imgs'))
-        img_save_path = os.path.join(arg.save_root_path, 'detect_imgs')
     if arg.mode == 'recognition' or arg.mode == 'make_features':
         # for saving the aligned faces images
         if not os.path.isdir(os.path.join(arg.save_root_path, 'aligned_faces')):  
             os.mkdir(os.path.join(arg.save_root_path, 'aligned_faces'))
-            faces_save_path = os.path.join(arg.save_root_path, 'aligned_faces')
         # for saving the features in .npy format
         if not os.path.isdir(os.path.join(arg.save_root_path, 'features_npy')):  
             os.mkdir(os.path.join(arg.save_root_path, 'features_npy'))
-            npy_save_path = os.path.join(arg.save_root_path, 'features_npy')
     
+    img_save_path = os.path.join(arg.save_root_path, 'detect_imgs')
+    faces_save_path = os.path.join(arg.save_root_path, 'aligned_faces')
+    npy_save_path = os.path.join(arg.save_root_path, 'features_npy')
     
     # list all the images to recognition 
     frame_list = os.listdir(arg.target_rec_path)
